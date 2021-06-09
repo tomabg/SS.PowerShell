@@ -13,22 +13,15 @@ namespace SS.PowerShell.Outlook
     public class EmailObject
     {
         public AddressObject Sender { get; internal set; }
-
-        public AddressObject RecepientTo { get; set; }
-
-        public AddressObject RecepientCC { get; set; }
-
         public string Subject { get; set; }
         public bool Draft { get; set; }
         public List<AttachmentObject> Attachments { get; internal set; } = new List<AttachmentObject>();
 
-        public EmailObject(AddressObject sender, string subject, bool draft, AddressObject recepientto, AddressObject recepientcc )
+        public EmailObject(AddressObject sender, string subject, bool draft)
         {
             this.Sender = sender;
             this.Subject = subject;
             this.Draft = draft;
-            this.RecepientTo = recepientto;
-            this.RecepientCC = recepientcc;
         }
 
         public string BodyText { get; set; }

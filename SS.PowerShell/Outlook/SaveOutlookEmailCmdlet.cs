@@ -71,15 +71,18 @@ namespace SS.PowerShell.Outlook
             Sender sender = null;
             if (this.Email.Sender != null)
                 sender = new Sender(this.Email.Sender.EmailAddress, this.Email.Sender.DisplayName);
-            
             using (var email = new Email(sender, this.Email.Subject, this.Email.Draft))
             {
-                email.Recipients.AddTo(this.Email.RecepientTo.EmailAddress, "");
-                email.Recipients.AddCc(this.Email.RecepientCC.EmailAddress, "");
+                //email.Recipients.AddTo("captainhook@neverland.com", "Captain Hook");
+                //email.Recipients.AddCc("crocodile@neverland.com", "The evil ticking crocodile");
                 email.BodyText = this.Email.BodyText;
                 email.BodyHtml = this.Email.BodyHtml;
                 email.Importance = (MessageImportance)this.Email.Importance;
+                //email.IconIndex = this.Email.Draft ? MessageIconIndex.UnsentMail : MessageIconIndex.NewMail;
                 email.Priority = MessagePriority.PRIO_NORMAL;
+                //email.ReceivedOn;
+                //email.SentOn;
+                //email.Attachments.Add(@"d:\crocodile.jpg");
                 this.Email.Attachments.ForEach(x => email.Attachments.Add(x.File, isInline: x.Inline, contentId: x.ContentId));
                 email.Save(this._File);
             }
