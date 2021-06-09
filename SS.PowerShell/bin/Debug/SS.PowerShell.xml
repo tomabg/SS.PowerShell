@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SS.PowerShell</name>
+    </assembly>
+    <members>
+        <member name="T:SS.PowerShell.EncodingType">
+            <summary>
+            <para type="description">Types of text encoding to use when reading content.</para>
+            </summary>
+        </member>
+        <member name="T:SS.PowerShell.Outlook.EmailImportance">
+            <summary>
+            Contains the relative priority of a message.
+            <para type="description">Contains the relative priority of a message.</para>
+            </summary>
+        </member>
+        <member name="F:SS.PowerShell.Outlook.EmailImportance.Low">
+            <summary>
+            The message has low importance.
+            </summary>
+        </member>
+        <member name="F:SS.PowerShell.Outlook.EmailImportance.Normal">
+            <summary>
+            The message has normal importance.
+            </summary>
+        </member>
+        <member name="F:SS.PowerShell.Outlook.EmailImportance.High">
+            <summary>
+            The message has high importance.
+            </summary>
+        </member>
+        <member name="T:SS.PowerShell.Outlook.EmailObject">
+            <summary>
+            <para type="description">Used to make a new Outlook E-mail MSG file.</para>
+            </summary>
+        </member>
+        <member name="T:SS.PowerShell.Outlook.NewOutlookEmailCmdlet">
+            <summary>
+            Create a new Email Object for creating a Outlook MSG file.
+            <para type="synopsis">Create a new Email Object for creating a Outlook MSG file.</para>
+            <para type="description">Create a new Email Object for creating a Outlook MSG file.</para>
+            <example>
+              <title>Default usage. </title>
+              <code>New-OutlookEmail </code>
+            </example>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.NewOutlookEmailCmdlet.SenderEmail">
+            <summary>
+            <para type="description">The full E-mail address of the Sender of the E-mail.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.NewOutlookEmailCmdlet.RecipientTo">
+            <summary>
+            <para type="description">The display name of the Sender of the E-mail.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.NewOutlookEmailCmdlet.RecipientCC">
+            <summary>
+            <para type="description">The full E-mail address of the Sender of the E-mail.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.NewOutlookEmailCmdlet.SenderDisplayName">
+            <summary>
+            <para type="description">The display name of the Sender of the E-mail.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.NewOutlookEmailCmdlet.Subject">
+            <summary>
+            <para type="description">The subject of the E-mail.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.NewOutlookEmailCmdlet.Draft">
+            <summary>
+            <para type="description">If the message is set as a draft message.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.NewOutlookEmailCmdlet.BodyText">
+            <summary>
+            <para type="description">The text body of the E-mail.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.NewOutlookEmailCmdlet.BodyHtml">
+            <summary>
+            <para type="description">The html body of the E-mail.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.NewOutlookEmailCmdlet.Importance">
+            <summary>
+            <para type="description">Relative priority of the message.</para>
+            </summary>
+        </member>
+        <member name="T:SS.PowerShell.Outlook.AddOutlookEmailAttachmentCmdlet">
+            <summary>
+            Save a Email Object as a Outlook MSG file.
+            <para type="synopsis">Save a Email Object as a Outlook MSG file.</para>
+            <para type="description">Save a Email Object as a Outlook MSG file.</para>
+            <example>
+              <title>Default usage. </title>
+              <code>Save-OutlookEmail </code>
+            </example>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.AddOutlookEmailAttachmentCmdlet.Email">
+            <summary>
+            <para type="description">Email Object to have attachment added.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.AddOutlookEmailAttachmentCmdlet.File">
+            <summary>
+            <para type="description">Filename and/or path of attachment.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.AddOutlookEmailAttachmentCmdlet.Inline">
+            <summary>
+            <para type="description">Is attachment in-line.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.AddOutlookEmailAttachmentCmdlet.ContentId">
+            <summary>
+            <para type="description">What is the content id of the in-line attachment.</para>
+            </summary>
+        </member>
+        <member name="T:SS.PowerShell.Outlook.SaveOutlookEmailCmdlet">
+            <summary>
+            Save a Email Object as a Outlook MSG file.
+            <para type="synopsis">Save a Email Object as a Outlook MSG file.</para>
+            <para type="description">Save a Email Object as a Outlook MSG file.</para>
+            <example>
+              <title>Default usage. </title>
+              <code>Save-OutlookEmail </code>
+            </example>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.SaveOutlookEmailCmdlet.Email">
+            <summary>
+            <para type="description">Email Object to be saved as Outlook MSG file.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.SaveOutlookEmailCmdlet.File">
+            <summary>
+            <para type="description">Filename and/or path for Outlook MSG file.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.Outlook.SaveOutlookEmailCmdlet.Force">
+            <summary>
+            <para type="description">Force to overwrite file without prompting if it already exists.</para>
+            </summary>
+        </member>
+        <member name="T:SS.PowerShell.SchemaTestResult`1">
+            <summary>
+            <para type="description">Result object that is returned from schema test.</para>
+            </summary>
+        </member>
+        <member name="T:SS.PowerShell.TestJsonSchemaCmdlet">
+            <summary>
+            Determines whether the JSON file is valid.
+            <para type="synopsis">Determines whether the JSON file is valid.</para>
+            <para type="description">Determines whether the JSON file is valid.</para>
+            <example>
+              <title>Default usage. </title>
+              <code>Test-JsonSchema schema.json source.json</code>
+            </example>
+            <example>
+              <title>Specifying the text encoding type for the files. </title>
+              <code>Test-JsonSchema schema.json source.json UTF8</code>
+            </example>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.TestJsonSchemaCmdlet.SchemaInJsonFile">
+            <summary>
+            The JSON schema file should be read from the '$schema' parameter in the JSON file.
+            <para type="description">The JSON schema file should be read from the '$schema' parameter in the JSON file.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.TestJsonSchemaCmdlet.SchemaFile">
+            <summary>
+            The JSON schema file to test against.
+            <para type="description">The JSON schema file to test against.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.TestJsonSchemaCmdlet.JsonFile">
+            <summary>
+            The source JSON file to test.
+            <para type="description">The source JSON file to test.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.TestJsonSchemaCmdlet.IgnoreReferenceResolvingWarnings">
+            <summary>
+            Do not write warning messages when schema is resolving external referenced schema's.
+            <para type="description">Do not write warning messages when schema is resolving external referenced schema's.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.TestJsonSchemaCmdlet.Encoding">
+            <summary>
+            Encoding type to use when reading schema and JSON file.
+            <para type="description">Encoding type to use when reading schema and JSON file.</para>
+            </summary>
+        </member>
+        <member name="T:SS.PowerShell.TestXmlSchemaCmdlet">
+            <summary>
+            Determines whether the XML file is valid.
+            <para type="synopsis">Determines whether the XML file is valid.</para>
+            <para type="description">Determines whether the XML file is valid.</para>
+            <example>
+              <title>Default usage. </title>
+              <code>Test-XmlSchema schema.xsd source.xml</code>
+            </example>
+            <example>
+              <title>Specifying the text encoding type for the files. </title>
+              <code>Test-XmlSchema schema.xsd source.xml UTF8</code>
+            </example>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.TestXmlSchemaCmdlet.SchemaFile">
+            <summary>
+            The XSD schema file to test against.
+            <para type="description">The XSD schema file to test against.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.TestXmlSchemaCmdlet.XmlFile">
+            <summary>
+            The source XML file to test.
+            <para type="description">The source XML file to test.</para>
+            </summary>
+        </member>
+        <member name="P:SS.PowerShell.TestXmlSchemaCmdlet.Encoding">
+            <summary>
+            Encoding type to use when reading schema and XML file.
+            <para type="description">Encoding type to use when reading schema and XML file.</para>
+            </summary>
+        </member>
+    </members>
+</doc>
