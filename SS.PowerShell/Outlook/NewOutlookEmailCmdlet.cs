@@ -32,6 +32,18 @@ namespace SS.PowerShell.Outlook
         /// <para type="description">The display name of the Sender of the E-mail.</para>
         /// </summary>
         [Parameter()]
+        public string RecipientTo { get; set; }
+
+        /// <summary>
+        /// <para type="description">The full E-mail address of the Sender of the E-mail.</para>
+        /// </summary>
+        [Parameter()]
+        public string RecipientCC { get; set; }
+
+        /// <summary>
+        /// <para type="description">The display name of the Sender of the E-mail.</para>
+        /// </summary>
+        [Parameter()]
         public string SenderDisplayName { get; set; }
 
         /// <summary>
@@ -71,7 +83,15 @@ namespace SS.PowerShell.Outlook
             if (!string.IsNullOrWhiteSpace(this.SenderEmail))
                 sender = new AddressObject(this.SenderEmail, this.SenderDisplayName);
 
-            var email = new EmailObject(sender, this.Subject, this.Draft)
+            AddressObject recepientto = null;
+            if (!string.IsNullOrWhiteSpace(this.RecipientTo))
+                recepientto = new AddressObject(this.RecipientTo, "");
+
+            AddressObject recepientcc = null;
+            if (!string.IsNullOrWhiteSpace(this.RecipientCC))
+                recepientcc = new AddressObject(this.RecipientCC, "");
+
+            var email = new EmailObject(sender, this.Subject, this.Draft, recepientto, recepientcc)
             {
                 BodyText = this.BodyText,
                 BodyHtml = this.BodyHtml,
